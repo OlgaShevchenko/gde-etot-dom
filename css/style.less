@@ -12,7 +12,7 @@ body {
   text-align: left;
   font-family:  Arial, sans-serif;
   background: @pagebg;
-  color: black;
+  color: @main_color;
   font-size: 17px;
 }
 
@@ -20,8 +20,10 @@ body {
 /*               variables                   */
 @pagebg: #ffffff;
 @topmenu_bg: #000000;
+@main_color: #424242;
 @menu_link_color: #b9b9c3;
 @menu_link_color_hover: #ffffff;
+@border_color: #cccccc;
 
 
 /*                   mixins                          */
@@ -30,6 +32,19 @@ body {
 	color: @menu_link_color;
 	text-decoration: none;
 }
+.date_style{
+	color: #ffffff;
+	text-transform: uppercase;
+	background: #ff5f47;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: bold;	
+	padding: 5px 10px;
+	display: inline-block;
+}
+
+
+
 
 .container{
 	max-width: 1280px;
@@ -197,4 +212,192 @@ body {
 .menu-banner{
 	float: right; 
 	padding-top: 10px;
+}
+
+
+.page_container{
+	width: 100%;
+	float:left;
+	position: relative;
+}
+.block-container{
+	max-width: 976px;
+	margin: 0 auto;
+	padding-right: 270px;		
+	padding-left: 10px;
+}	
+.bordered-block{
+	border: 1px solid @border_color;
+	padding: 0 25px 0 25px;
+	margin-top: 22px;
+	float:left;
+	width: 100%;
+	box-sizing: border-box;
+}
+.breadcrumbs{
+	list-style: none;
+	width: 100%;
+	float: left;
+	padding-bottom: 26px;
+	padding-top: 13px;
+}
+.breadcrumbs__item{
+	float:left;
+	color: #0072be;
+	font-size: 12px;
+	padding-right: 5px;
+}
+.breadcrumbs__link{
+	color: #0072be;
+	text-decoration: none;
+}
+.main-aksia-header{
+	display: table;
+	width: 100%;
+	padding-bottom: 36px;
+}
+.main-aksia-header__description{
+	display: table-cell;
+	vertical-align: top;
+	width: 71%
+}
+.main-aksia-header__timer-block{
+	display: table-cell;
+	vertical-align: top;
+	text-align: center;
+}
+.main-aksia-header__txt{
+	font-size: 19px; 
+	font-weight: bold; 	
+	padding-bottom: 5px;
+}
+.main-aksia-header__nums{
+	display: inline-block;	
+	color: #ffcc02; 
+	font-size: 18px;	
+	padding: 7px 15px; 
+	border-radius: 3px;
+}
+.main-aksia-header__text{
+	color:#2e353a;
+	font-size: 26px;	
+	padding-bottom: 15px;
+}
+.main-aksia-header__date{
+	.date_style;
+}
+.main-aksia{
+	display: table;
+	width: 100%;
+	padding-bottom: 35px;
+	border-bottom: 1px solid @border_color;
+}
+.main-aksia__image{
+	display: table-cell;
+	vertical-align: top;
+	width: 40%;
+}
+.main-aksia__image img{
+	width: 100%;
+	vertical-align: bottom;
+}
+.main-aksia__description{
+	display: table-cell;
+	padding: 8px 15px 0 15px;
+	font-size: 15px;
+	color: #2e353a;
+}
+.main-aksia__text{
+	line-height: 20px;
+}
+.main-aksia__info{
+	padding-top: 25px;
+	line-height: 40px;
+}
+.main-aksia__phone{
+	color: #ffffff;
+	text-align: center; 
+	height: 40px;
+	line-height: 40px;
+	background: #62c741;
+	border-radius: 5px;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 0 20px;
+	margin-left: 10px;
+}
+.subheader{
+	padding: 22px 0 20px 0;
+	font-size: 18px;
+	width: 100%;
+	float:left;
+}
+.aksia-item{
+	display: table;
+	width: 100%;
+	padding-bottom: 18px;
+}
+.aksia-item__image{
+	display: table-cell;
+	vertical-align: top;
+	width: 32%;
+	position: relative;
+}
+.aksia-item__image img{
+	width: 100%;
+	vertical-align: bottom;
+}
+.aksia-item__date{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	.date_style;
+}
+.aksia-item__description{
+	display: table-cell;
+	vertical-align: top;
+	padding: 16px 16px 0 16px;
+}
+.aksia-item__name{
+	font-weight: bold;	
+	padding-bottom: 4px;
+	font-size: 17px;
+}
+.aksia-item__text{
+	font-size: 14px;
+	line-height: 18px;
+	color: #757575;
+}
+.aksia-item__timer{
+	display: table-cell;
+	vertical-align: middle;
+	width: 120px;	
+}
+.aksia-item__txt{
+	font-size: 13px; 
+	padding-bottom: 5px;	
+}
+.aksia-item__num{	
+	background: #424242;
+	width: 21px; 
+	height: 28px; 	
+	display: inline-block; 
+	text-align: center; 
+	line-height: 28px; 	
+	float:left; 
+	margin-right: 2px; 
+	color: #ffffff; 
+	font-size: 18px;
+}
+.aksia-item__num--first{
+	border-radius: 3px 0 0 3px;
+}
+.aksia-item__num--last{
+	border-radius: 0 3px 3px 0;
+}
+.aksia-item__day{
+	line-height: 28px;
+	font-size: 13px;
+	padding-left: 4px;
 }
