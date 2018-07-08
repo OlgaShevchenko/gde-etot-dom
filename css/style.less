@@ -51,6 +51,10 @@ body {
 
 
 
+.nowrap{
+	white-space: nowrap;
+}
+
 .container{
 	max-width: 1280px;
 	margin: 0 auto;
@@ -462,4 +466,49 @@ body {
 .item_block__date{
 	.date_style;
 	margin:0 0 0  20px;	
+}
+
+.sidebar{
+	width: 250px;
+	right:0;
+	top:0;
+	background: #ebebed;
+	padding-top: 18px;	
+	position: absolute;
+	border-left: 1px solid @border_color;
+}
+.sidebar-item{	
+	border-bottom: 1px solid @border_color;		
+	display: block;
+	padding: 15px 15px 10px 15px;
+	cursor: pointer;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	-webkit-transition: all 0.3s ease-out;
+	text-decoration: none;
+}
+.sidebar-item:hover{
+	background: #ffffff;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	-webkit-transition: all 0.3s ease-out;
+}
+.siderbar-item__image{
+	border: 1px solid @border_color;
+}
+.siderbar-item__image img{
+	vertical-align: bottom;
+}
+.siderbar-item__name{
+	font-weight: bold;
+	font-size:  14px;
+	padding-top: 10px;
+	line-height: 20px;
+	color: #000000;
+}
+.siderbar-item__description{
+	font-size: 11px;
+	padding-top: 6px;
+	line-height: 15px;
+	color: #6e6670;
 }
