@@ -31,6 +31,9 @@ body {
 	font-size: 12px;
 	color: @menu_link_color;
 	text-decoration: none;
+	@media(max-width: 1070px){	
+		font-size: 11px;
+	}
 }
 .date_style{
 	color: #ffffff;
@@ -155,11 +158,19 @@ body {
 	list-style: none;
 	float: left;
 }
+.main-menu.fixed{
+	position: fixed;
+	z-index: 5;
+}		
 .main-menu__logo{
 	float:left;
 	width: 182px;
-	padding: 10px 20px 0 0;
+	padding: 10px 20px 0 0;	
+	@media(max-width: 1230px){	
+		width: 140px;
+	}
 }
+
 .menu__item{
 	float:left;
 }
@@ -172,6 +183,9 @@ body {
 	height: 50px;
 	line-height: 50px;
 	position: relative;
+	@media(max-width: 1230px){	
+		font-size: 12px;
+	}
 }
 .menu__link:hover:before{
 	content: "";
@@ -218,22 +232,38 @@ body {
 	height: 3px;
 	background: #ffcc00;
 }
+.menu__link--absolut{
+	background: url('../images/Absolut-Logo.svg') top left no-repeat;
+	width: 78px;
+	height: 15px;
+	display: block;
+	margin-top: 19px;
+}
+.menu__link--absolut:hover{
+	background: url('../images/Absolut-Logo-blue.svg') top left no-repeat;
+}
 .menu-banner{
 	float: right; 
 	padding-top: 10px;
 }
-
+@media(max-width: 1230px){	
+	.menu-banner img{
+		width: 190px;
+	}
+}
 
 .page_container{
 	width: 100%;
 	float:left;
 	position: relative;
+	min-width: 1010px;
 }
 .block-container{
 	max-width: 976px;
 	margin: 0 auto;
 	padding-right: 270px;		
 	padding-left: 10px;
+	min-width: 740px;
 }	
 .bordered-block{
 	border: 1px solid @border_color;
@@ -286,6 +316,7 @@ body {
 	font-size: 18px;	
 	padding: 7px 15px; 
 	border-radius: 3px;
+	background: #424242;
 }
 .main-aksia-header__text{
 	color:#2e353a;
