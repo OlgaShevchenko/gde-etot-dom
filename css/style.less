@@ -42,6 +42,11 @@ body {
 	padding: 5px 10px;
 	display: inline-block;
 }
+.subheader_style{
+	font-size: 18px;
+	width: 100%;
+	float:left;
+}
 
 
 
@@ -329,9 +334,11 @@ body {
 }
 .subheader{
 	padding: 22px 0 20px 0;
-	font-size: 18px;
-	width: 100%;
-	float:left;
+	.subheader_style;
+}
+.subheader2{
+	padding: 70px 0 20px 0;
+	.subheader_style;
 }
 .aksia-item{
 	display: table;
@@ -400,4 +407,59 @@ body {
 	line-height: 28px;
 	font-size: 13px;
 	padding-left: 4px;
+}
+
+.items-container{
+	display: -webkit-flex;
+	-webkit-flex-flow: row wrap;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 100%;
+	float:left;
+}
+.item_block{
+	width: 32%;
+	border: 1px solid @border_color;
+	background: #ffffff;
+	float:left;
+	display: block;
+	margin-bottom: 1.5%;
+	padding-bottom: 20px;
+	cursor: pointer;
+	text-decoration: none;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	-webkit-transition: all 0.3s ease-out;
+	color: @main_color;
+}
+.item_block:hover{
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	-webkit-transition: all 0.3s ease-out;
+	box-shadow: 0 5px 10px rgba(0,0,0, 0.3);
+}
+.item_block__image{
+	height: 200px;	
+}
+.item_block__image img{
+	vertical-align: bottom;
+}
+.item_block__image--image1{
+	background: url('../images/item_image1.jpg') top center no-repeat;
+}
+.item_block__image--image2{
+	background: url('../images/item_image2.jpg') top center no-repeat;
+}
+.item_block__image--image3{
+	background: url('../images/item_image3.jpg') top center no-repeat;
+}
+.item_block__description{	
+	font-size: 20px;
+	padding: 16px 20px 14px 20px;
+	line-height: 22px;
+}
+.item_block__date{
+	.date_style;
+	margin:0 0 0  20px;	
 }
